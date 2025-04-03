@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+<body>
+  <form id="newForm" method="post" action="<% if (movie && movie.id) { %>
+    /update/<%= movie.id %>
+  <% } else { %>
+    /movies
+  <% } %>"
+>
+    <label for="title">Movie's Title:</label>
+    <input type="text" name="title" id="title" value="<%= movie?.title || '' %>" required />
+  
+    <label for="year">Year:</label>
+    <input type="number" name="year" id="year" value="<%= movie?.year || '' %>" min="1900" max="2100" />
+  
+    <label for="rating">Rate:</label>
+    <input type="number" name="rating" id="rating" value="<%= movie?.rating || '' %>" min="0" max="10" />
+  
+    <label for="director">Director:</label>
+    <input type="text" name="director" id="director" value="<%= movie?.director || '' %>" required />
+  
+    <label for="categoryId">Select Category:</label>
+    <select name="categoryId" id="categoryId" required>
+      <option value="" disabled selected>None</option>
+      <% categories.forEach((category) => { %>
+        <option value="<%= category.id %>" <%= movie?.category_id === category.id ? 'selected' : '' %>>
+          <%= category.category %>
+        </option>
+      <% }); %>
+    </select>
+  
+    <label for="review">Review:</label>
+    <textarea name="review" id="review"><%= movie?.review || '' %></textarea>
+  
+    <label for="image">Image Path:</label>
+    <input type="text" name="image" id="image" value="<%= movie?.image || '' %>" />
+  
+    <button type="submit"><%= submit || 'Submit' %></button>
+  </form>
+  </div>
+  <pre><%= JSON.stringify(movie, null, 2) %></pre>
+
+</body>
+</html>

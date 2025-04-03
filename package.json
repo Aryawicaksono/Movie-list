@@ -1,0 +1,20 @@
+{
+  "name": "capstone_booknotes",
+  "version": "1.0.0",
+  "description": "my list of watched movies",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aryudha",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "pg": "^8.14.1"
+  }
+}

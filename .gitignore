@@ -1,0 +1,49 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Cache
+.cache/
+
+# Dependency directories
+jspm_packages/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+/dist/
+/build/
+/out/
+
+# Coverage reports
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Debug files
+*.log
+*.lock
+
+# Miscellaneous
+*.swp
+*.bak
+*.pid
+*.seed
+*.pid.lock
